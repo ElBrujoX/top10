@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Top 10 Albums - 2024</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="date"></div>
+<div class="toprow">
+  <div class="nowplaying">
+    <h3>Now Playing</h3>
+    <div><button id="play"><span></span></button></div>
+    <div>
+      <div>
+        <h4 id="artist">Drug Church</h4>
+        <h4 id="song">Hey Listen</h4>
+      </div>
+    </div>
+    <div><button id="prev" onclick="playPrev();">‹ Prev</button><button id="next" onclick="playNext();">Next ›</button></div>
+  </div>
+  <div class="analyzer">
+    <h3>Visualizer</h3>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<div class="window">
+  <div class="dragarea"></div>
+  <h3>Top 10 Albums - 2024</h3>
+  <div class="frame">
+    <div class="imgwrap"><img class="active" src='https://f4.bcbits.com/img/a2870032268_16.jpg'><img src="https://f4.bcbits.com/img/a4024825693_10.jpg"><img src="https://f4.bcbits.com/img/a2689309068_16.jpg"><img src="https://f4.bcbits.com/img/a2871861375_16.jpg"><img src="https://f4.bcbits.com/img/a3540184311_16.jpg"><img src="https://f4.bcbits.com/img/a1338331199_16.jpg"><img src="https://f4.bcbits.com/img/a0033648289_16.jpg"><img src="https://f4.bcbits.com/img/a0990023259_16.jpg"><img src="https://f4.bcbits.com/img/a4071043534_16.jpg"><img src="https://f4.bcbits.com/img/a3924570048_16.jpg"></div>
+    <div>
+      <ul>
+        <li><a class="active" href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/drug-church.mp3">Drug Church - <span> Prude</span></a></li>
+
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/blood-incantation.mp3">Blood Incantation - <span>Absolute Elsewhere</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/the-chisel.mp3">The Chisel - <span>What a Fucking Nightmare</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/prison-affair.mp3">Prison Affair - <span>Demo IV</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/dead-finks.mp3">Dead Finks - <span>Eve of Ascension</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/cassandra-jenkins.mp3">Cassandra Jenkins - <span>My Light, My Destroyer</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/font.mp3">Font - <span>Strange Burden</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/usa-nails.mp3">USA Nails - <span>Feel Worse</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/sheer-mag.mp3">Sheer Mag - <span>Playing Favorites</span></a></li>
+        <li><a href="https://raw.githubusercontent.com/adamjkuhn/audiofiles/master/dummy.mp3">Dummy - <span>Free Energy</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<svg image-rendering='optimizeSpeed'>
+  <filter color-interpolation-filters='sRGB' height='100%' id='dither' width='100%' x='0' y='0'>
+    <feimage height='4' width='4' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA+UlEQVR42gXBERTCUABA0X/OYDAYDAZBEAyCIBgMgiAIgiAYBINgEAwGgyAIBsFgMAiCIAiCIAgGQTAYDAaDIAiCwWDwulcIIXg8HgwGA36/H4qi8Hq9sCyLtm0Rm82G0WjE5XJhvV4ThiHT6ZT7/U4QBIhut0tVVaiqSpZl9Pt9vt8vnU6HsiwRh8OB5XLJfr9nNptxPp9xXZckSbBtGyHLMs/nE9M0aZoGSZJI05ThcEhd14jdbsdkMuF2u+H7PtvtlvF4zPV6xfM8hGEYfD4fdF2nKAp6vR7v9xtN08jzHHE6nVitVsRxzGKx4Hg84jgOURQxn8/5A7oKnYRU4EpfAAAAAElFTkSuQmCC'></feimage>
+    <fetile></fetile>
+    <fecomposite in='SourceGraphic' k1='0' k2='1' k3='1' k4='-0.5' operator='arithmetic'></fecomposite>
+    <fecomponenttransfer>
+      <fefuncr tablevalues='0 1' type='discrete'></fefuncr>
+      <fefuncg tablevalues='0 1' type='discrete'></fefuncg>
+      <fefuncb tablevalues='0 1' type='discrete'></fefuncb>
+    </fecomponenttransfer>
+  </filter>
+</svg>
+<div id="icon"><img src="https://assets.codepen.io/383755/Mac.svg" alt="" /></div>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/Draggable.min.js'></script>
+<script src='https://assets.codepen.io/16327/Flip.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
